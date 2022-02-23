@@ -2,13 +2,13 @@ const express = require("express");
 const app = express();
 const PORT = process.env.PORT || 3099;
 app.use(express.json());
+app.use(express.static("public"));
 
 const Datastore = require("nedb");
 const database = new Datastore("database.db");
 database.loadDatabase();
-// database.insert({ name: "Flyman", status: "🥏" });
 
-app.get("/", async function (req, res) {
+app.get("/greet", async function (req, res) {
   res.send({ message: "Hello World" });
 });
 

@@ -1,1 +1,1 @@
-#simple-nedb-app
+simple-nedb-app
