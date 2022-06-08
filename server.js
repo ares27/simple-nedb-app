@@ -96,7 +96,7 @@ app.post("/message", (req, res) => {
   let msgFrom = req.body.From;
   let msgBody = req.body.Body;
 
-  runBot(msgBody);
+  // runBot(msgBody);
 
   res.send(`
     <Response>
